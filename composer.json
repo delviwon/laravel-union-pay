@@ -1,0 +1,30 @@
+{
+  "name": "lewee/union-pay",
+  "description": "A PHP SDK for unionPay",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "jowan",
+      "email": "jowan@ahlewei.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Lewee\\UnionPay\\UnionPayProvider"
+      ],
+      "aliases": {
+        "UnionPay": "Lewee\\UnionPay\\Facades\\UnionPay"
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Lewee\\UnionPay\\": "src/"
+    }
+  }
+}
