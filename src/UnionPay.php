@@ -111,7 +111,7 @@ class UnionPay
             throw new InternalException('参数错误');
         }
 
-        if ($notify_data['sign'] !== $signature) {
+        if (strtolower($notify_data['sign']) !== $signature) {
             throw new InternalException('通知签名验证失败');
         }
 
